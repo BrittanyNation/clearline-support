@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &amp; FAQs — Clearline Support</title>
+  <meta name="description" content="Request a callback from Clearline Support, check support hours, and read the questions owners ask most.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact &amp; FAQs — Clearline Support">
+  <meta property="og:description" content="Callback requests with a real confirmation, support hours, and plain word answers to common questions.">
+  <meta property="og:image" content="https://brittanynation.github.io/clearline-support/og-image.png">
+  <meta property="og:url" content="https://brittanynation.github.io/clearline-support/contact.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">Clearline <span>Support</span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Help Center</a>
+        <a href="tickets.html">Tickets</a>
+        <a href="contact.html" aria-current="page">Contact &amp; FAQs</a>
+      </nav>
+      <a class="ticket-count" href="tickets.html" style="text-decoration:none">Send a ticket</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="hero">
+      <div>
+        <h1>Talk to a person, <em>on your schedule</em>.</h1>
+        <p>Some things are faster out loud. Request a callback and a support specialist calls you in the window you pick, with your account history already open. No queue, no hold music.</p>
+        <p class="note">Most callbacks happen within the window. If we miss you, we try once more, then email to rebook.</p>
+      </div>
+      <img src="images/videocall.jpg" alt="A woman on a video call at a tidy home desk">
+    </div>
+
+    <div class="two-col">
+      <div>
+        <div id="callbackConfirm" style="display:none"></div>
+        <div class="form-card" id="callbackWrap">
+          <h2 style="color:var(--slate);margin-top:0">Request a callback</h2>
+          <form id="callbackForm" novalidate>
+            <div class="field"><label for="cName">Your name</label><input id="cName" type="text" autocomplete="name"><div class="error" id="ceName"></div></div>
+            <div class="field"><label for="cPhone">Phone number</label><input id="cPhone" type="tel" autocomplete="tel" placeholder="555 123 4567"><div class="error" id="cePhone"></div></div>
+            <div class="field"><label for="cTopic">What is the call about</label>
+              <select id="cTopic"><option value="">Choose a topic</option><option>Billing question</option><option>Locked out of my account</option><option>Invoice problem</option><option>Help getting started</option><option>Something else</option></select>
+              <div class="error" id="ceTopic"></div></div>
+            <div class="field"><label for="cTime">Best time window, Central</label>
+              <select id="cTime"><option value="">Choose a window</option><option>Morning, 9 AM to 12 PM</option><option>Afternoon, 12 PM to 3 PM</option><option>Late afternoon, 3 PM to 6 PM</option></select>
+              <div class="error" id="ceTime"></div></div>
+            <button class="btn btn-coral" type="submit">Book my callback</button>
+          </form>
+        </div>
+
+        <div class="form-card" style="margin-top:22px">
+          <h2 style="color:var(--slate);margin-top:0">The Clearline Letter</h2>
+          <p>One short email a month about changes that affect your invoices or billing. Nothing else, ever.</p>
+          <form id="letterForm" novalidate>
+            <div class="field"><label for="letterEmail">Email address</label><input id="letterEmail" type="email" placeholder="name@example.com"><div class="error" id="letterMsg" role="status"></div></div>
+            <button class="btn" type="submit">Join the letter</button>
+          </form>
+        </div>
+      </div>
+
+      <div>
+        <img src="images/team.jpg" alt="The Clearline support team working together in a bright office" style="width:100%;height:220px;object-fit:cover;border-radius:14px;margin-bottom:18px">
+        <h2 style="color:var(--slate)">Support hours, Central Time</h2>
+        <table class="hours">
+          <tr data-day="1"><td>Monday</td><td>8 AM to 6 PM</td></tr>
+          <tr data-day="2"><td>Tuesday</td><td>8 AM to 6 PM</td></tr>
+          <tr data-day="3"><td>Wednesday</td><td>8 AM to 6 PM</td></tr>
+          <tr data-day="4"><td>Thursday</td><td>8 AM to 6 PM</td></tr>
+          <tr data-day="5"><td>Friday</td><td>8 AM to 6 PM</td></tr>
+          <tr data-day="6"><td>Saturday</td><td>9 AM to 1 PM, tickets only</td></tr>
+          <tr data-day="0"><td>Sunday</td><td>Closed, articles stay open</td></tr>
+        </table>
+        <p class="note" style="margin-top:10px">Today is highlighted. Tickets sent outside hours are answered first thing the next business day, high priority first.</p>
+
+        <div style="background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;margin-top:18px;display:flex;gap:16px;align-items:center">
+          <img src="images/owner.jpg" alt="A smiling shop owner standing behind shelves of homemade preserves" style="width:96px;height:96px;object-fit:cover;border-radius:12px">
+          <div>
+            <p style="margin:0">“I sent a ticket at lunch and the answer was waiting before I closed the shop. It read like a person, because it was one.”</p>
+            <p class="note" style="margin:6px 0 0">Sample quote for this portfolio concept, written for a fictional preserves maker in Clarksville.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section style="margin-top:36px">
+      <div class="section-head"><h2>Questions owners ask most</h2></div>
+      <div class="faq-item"><button class="faq-q" type="button">Will a billing problem delete my invoices?</button><div class="faq-a"><p>No. A failed payment pauses sending new invoices, and nothing else. Your invoices, clients and records stay in place for 30 days while you fix the card, and forever once the payment goes through.</p></div></div>
+      <div class="faq-item"><button class="faq-q" type="button">How fast will I hear back on a ticket?</button><div class="faq-a"><p>Within one business day, and high priority tickets, being locked out or a payment problem, are answered first. Your ticket page shows the status the moment it changes.</p></div></div>
+      <div class="faq-item"><button class="faq-q" type="button">Can my bookkeeper have access without my password?</button><div class="faq-a"><p>Yes, and they should. Invite them from Settings, then Team, with the Viewer role. They get their own sign in, can look at everything, and cannot change billing.</p></div></div>
+      <div class="faq-item"><button class="faq-q" type="button">Why can I not delete an invoice?</button><div class="faq-a"><p>Invoice numbers are a legal record. Voiding keeps the number, the reason, and a note to your client, so your books stay honest and your accountant sees the full story.</p></div></div>
+      <div class="faq-item"><button class="faq-q" type="button">Is the chat a real person?</button><div class="faq-a"><p>No, and we say so on the panel itself. The chat matches your words to help articles and answers instantly. For a person, send a ticket or book a callback on this page.</p></div></div>
+      <div class="faq-item"><button class="faq-q" type="button">What should I put in a ticket to get a fast answer?</button><div class="faq-a"><p>Three things: what you did, what you expected, and what happened instead. An invoice number or a ticket reference, if you have one, helps us find the history in seconds.</p></div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p><strong>Clearline Support</strong> is the help center for the fictional Clearline invoicing tool. This site is an original portfolio concept by Brittany Nation. Every form on this site works in your browser only.</p>
+      <p>Photos: Pexels. Design workflow: Sketch and Webflow for layout thinking, built with HTML, CSS and JavaScript.</p>
+    </div>
+  </footer>
+  <script src="contact.js"></script>
+  <script src="chat.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tickets — Clearline Support</title>
+  <meta name="description" content="Send a Clearline support ticket, track its status, read replies, add updates, and close it when the problem is fixed.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tickets — Clearline Support">
+  <meta property="og:description" content="A working ticket desk: validated form, real ticket reference, status tracking, replies, and closing.">
+  <meta property="og:image" content="https://brittanynation.github.io/clearline-support/og-image.png">
+  <meta property="og:url" content="https://brittanynation.github.io/clearline-support/tickets.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">Clearline <span>Support</span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Help Center</a>
+        <a href="tickets.html" aria-current="page">Tickets</a>
+        <a href="contact.html">Contact &amp; FAQs</a>
+      </nav>
+      <a class="ticket-count" href="index.html" style="text-decoration:none">Read help articles</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="section-head">
+      <h1 style="color:var(--slate)">Send a ticket, then watch it move</h1>
+      <p>Every ticket gets a reference number the moment it is sent. Track it here, add replies as things change, and close it when you are done. In this portfolio demo, tickets are saved in your own browser.</p>
+    </div>
+
+    <div id="confirmBox" style="display:none"></div>
+
+    <div class="form-card" id="formWrap" style="margin-bottom:30px">
+      <h2 style="color:var(--slate);margin-top:0">New ticket</h2>
+      <form id="ticketForm" novalidate>
+        <div class="two-col" style="gap:16px">
+          <div class="field"><label for="fName">Your name</label><input id="fName" type="text" autocomplete="name"><div class="error" id="eName"></div></div>
+          <div class="field"><label for="fEmail">Email for replies</label><input id="fEmail" type="email" autocomplete="email"><div class="error" id="eEmail"></div></div>
+        </div>
+        <div class="two-col" style="gap:16px">
+          <div class="field"><label for="fCategory">Topic</label>
+            <select id="fCategory"><option value="">Choose a topic</option><option>Billing</option><option>Invoices</option><option>Account and sign in</option><option>Getting started</option><option>Something else</option></select>
+            <div class="error" id="eCategory"></div></div>
+          <div class="field"><label for="fPriority">Priority</label>
+            <select id="fPriority"><option value="">Choose a priority</option><option>Normal</option><option>High</option><option>Low</option></select>
+            <div class="error" id="ePriority"></div></div>
+        </div>
+        <div class="field"><label for="fSubject">Subject</label><input id="fSubject" type="text" placeholder="Short version, like Card charged twice in May"><div class="error" id="eSubject"></div></div>
+        <div class="field"><label for="fMessage">What happened</label><textarea id="fMessage" rows="5" placeholder="What you did, what you expected, and what happened instead"></textarea><div class="error" id="eMessage"></div></div>
+        <button class="btn btn-coral" type="submit">Send ticket</button>
+        <p class="note">High priority is answered first and is meant for being locked out or a payment problem.</p>
+      </form>
+    </div>
+
+    <section>
+      <div class="section-head"><h2>Your tickets</h2></div>
+      <div class="toolbar">
+        <div class="chips" role="group" aria-label="Filter by status">
+          <button class="chip active" type="button" data-status="All">All</button>
+          <button class="chip" type="button" data-status="Open">Open</button>
+          <button class="chip" type="button" data-status="In Progress">In Progress</button>
+          <button class="chip" type="button" data-status="Resolved">Resolved</button>
+          <button class="chip" type="button" data-status="Closed">Closed</button>
+        </div>
+        <input type="search" id="lookupInput" placeholder="Search by reference, email, or subject" aria-label="Search tickets">
+        <span class="result-count" id="ticketCount"></span>
+      </div>
+      <div class="two-col">
+        <div id="ticketList"></div>
+        <div id="ticketDetail"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p><strong>Clearline Support</strong> is the help center for the fictional Clearline invoicing tool. This site is an original portfolio concept by Brittany Nation. Every form on this site works in your browser only.</p>
+    </div>
+  </footer>
+  <script src="tickets.js"></script>
+  <script src="chat.js"></script>
+</body>
+</html>

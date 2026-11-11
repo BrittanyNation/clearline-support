@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clearline Support — Help Center for Clearline Invoicing</title>
+  <meta name="description" content="Clearline Support is the help center for Clearline, a simple invoicing tool for small businesses. Search plain word help articles, send a ticket, track replies, and request a callback.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Clearline Support — Help Center for Clearline Invoicing">
+  <meta property="og:description" content="Plain word help articles, a working ticket desk, and a callback request for Clearline customers.">
+  <meta property="og:image" content="https://brittanynation.github.io/clearline-support/og-image.png">
+  <meta property="og:url" content="https://brittanynation.github.io/clearline-support/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">Clearline <span>Support</span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Help Center</a>
+        <a href="tickets.html">Tickets</a>
+        <a href="contact.html">Contact &amp; FAQs</a>
+      </nav>
+      <a class="ticket-count" href="tickets.html" style="text-decoration:none">Send a ticket</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="status-band" role="status">
+      <span class="status-dot" aria-hidden="true"></span>
+      <strong>All Clearline systems are working normally.</strong>
+      <span>Checked at <span id="statusTime">just now</span>. If something still feels wrong on your account, it is account specific, and a ticket is the fastest route.</span>
+    </div>
+
+    <div class="hero">
+      <div>
+        <h1>Help that reads like a <em>person wrote it</em>.</h1>
+        <p>Clearline is a simple invoicing tool for small businesses. This help center holds every how to in plain words, with the exact clicks in order. Search below, or browse by topic.</p>
+        <div class="big-search">
+          <input type="search" id="heroSearch" placeholder="Try billing, password, or reminder" aria-label="Search help articles">
+        </div>
+        <p class="note">Twelve articles, each under five minutes. If an article does not fix it, a ticket gets a person involved.</p>
+      </div>
+      <img src="images/hero.jpg" alt="A smiling support agent wearing a headset and working on a laptop">
+    </div>
+
+    <div class="trust-band" aria-label="Support promises">
+      <div class="trust-card"><strong>Plain words first</strong><p>Every article is written the way we would explain it out loud.</p></div>
+      <div class="trust-card"><strong>Replies within one business day</strong><p>Tickets are answered in the order they arrive, high priority first.</p></div>
+      <div class="trust-card"><strong>No phone queue</strong><p>Request a callback and we call you at the time you pick.</p></div>
+      <div class="trust-card"><strong>Your data stays yours</strong><p>A billing problem never deletes invoices, clients, or records.</p></div>
+    </div>
+
+    <section id="articles">
+      <div class="section-head">
+        <h2>Help articles</h2>
+        <p>Pick a topic, search, or sort by what helped other owners most. Open any article to read the full steps and mark it helpful.</p>
+      </div>
+      <div class="toolbar">
+        <div class="chips" role="group" aria-label="Filter by topic">
+          <button class="chip active" type="button" data-cat="All">All topics</button>
+          <button class="chip" type="button" data-cat="Getting Started">Getting Started</button>
+          <button class="chip" type="button" data-cat="Billing">Billing</button>
+          <button class="chip" type="button" data-cat="Invoices">Invoices</button>
+          <button class="chip" type="button" data-cat="Account">Account</button>
+        </div>
+        <input type="search" id="searchInput" placeholder="Search articles" aria-label="Search articles">
+        <select id="sortSelect" aria-label="Sort articles">
+          <option value="helpful">Sort: Most helpful</option>
+          <option value="az">Sort: A to Z</option>
+          <option value="short">Sort: Shortest read</option>
+        </select>
+        <span class="result-count" id="resultCount"></span>
+      </div>
+      <div class="grid" id="articleGrid"></div>
+    </section>
+  </main>
+
+  <div class="modal-back" id="articleModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+      <span class="tag" id="modalTag"></span>
+      <h2 id="modalTitle"></h2>
+      <ol id="modalSteps"></ol>
+      <div class="vote-row">
+        <span><strong>Did this fix it?</strong></span>
+        <button type="button" id="voteYes">Yes, this helped</button>
+        <a class="btn btn-small btn-coral" href="tickets.html">No, I need a ticket</a>
+        <span class="note" id="voteMsg" role="status"></span>
+      </div>
+      <p style="margin-top:18px"><button class="btn btn-ghost btn-small" type="button" id="modalClose">Close article</button></p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p><strong>Clearline Support</strong> is the help center for the fictional Clearline invoicing tool. This site is an original portfolio concept by Brittany Nation. Support hours and articles are sample content, and every form on this site works in your browser only.</p>
+      <p>Photos: Pexels. Design workflow: Sketch and Webflow for layout thinking, built with HTML, CSS and JavaScript.</p>
+    </div>
+  </footer>
+  <script src="help.js"></script>
+  <script src="chat.js"></script>
+</body>
+</html>
